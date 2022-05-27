@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+:root {
+    /* Primary Colors */
+    --soft-red: hsl(10, 79%, 65%);
+    --cyan: hsl(186, 34%, 60%);
+
+    /* Nuetral Colors */
+    --dark-brown: hsl(25, 47%, 15%);
+    --medium-brown: hsl(28, 10%, 53%);
+    --cream: hsl(27, 66%, 92%);
+    --very-pale-orange: hsl(33, 100%, 98%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: auto;
+}
+
+main{
+    margin: auto;
+    justify-self: center;
+}
+.balance{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 15vh;
+    height: fit-content;
+    background-color: var(--soft-red);
+    padding: 1em;
+    border-radius: .7em;
+    color: white;
+    min-width: 100%;
+    width: fit-content;
+}
+
+.balance-title{
+    font-size: .7em;
+    margin-bottom: .5em;
+}
+
+.balance-picture{
+    width: 3em;
+    height: 3em;
+}
+
+.spending{
+    padding: 1em;
+    height: fit-content;
+    background-color: var(--very-pale-orange);
+    border-radius: .7em;
+    margin-top: 1.5em;
+    min-width: 40vw;
+    width: fit-content;
+}
+
+.spending-title{
+    color: var(--dark-brown);
+}
+
+.graph{
+    margin-top: 3em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.amount{
+    background-color: var(--dark-brown);
+    padding: .3em;
+    border-radius: .3em;
+    color: var(--cream);
+    margin-bottom: .5em;
+    position: absolute;
+    top: -2.2em;
+    display: none;
+    transition: all 0.5s ease-out;
+}
+
+.col{
+    width: 2.2em;
+    border-radius: .2em;
+    background-color: var(--soft-red);
+    transition: all 0.5s ease-out;
+}
+
+.col:hover{
+    opacity: .5;
+}
+
+.line{
+    margin-top: 2em;
+    height: 1px;
+    opacity: .4;
+    background-color: var(--medium-brown);
+}
+
+.info{
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grey-text{
+    color: var(--medium-brown);
+    font-size: .5em;
+}
+
+.precentage{
+    font-weight: bold;
+    color: var(--dark-brown);
+}
+
+@media (max-width: 700px){
+    
+    .balance, .spending{
+        min-width: 80vw;
+    }
+    .balance{
+        min-height: 5vh;
+    }
+
+
+    
+}
